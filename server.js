@@ -10,6 +10,6 @@ db.on('error', err => console.error(err))
 db.once('open',()=>{
     console.log("db connected");
 })
-app.listen(4000,()=>{
+app.listen(5000,()=>{
     console.log("server started 3000");
 })
