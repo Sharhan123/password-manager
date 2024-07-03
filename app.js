@@ -18,6 +18,10 @@ app.use(cors({
     }
   }));
 
+  app.get('/', function(req, res){
+    res.json({message:'ready'})
+  })
+
 app.use('/api/user',userRouter)
 
 module.exports = app;
