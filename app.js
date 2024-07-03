@@ -12,11 +12,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors({
-    origin: function(origin, callback) {
-      callback(null, true); 
-    }
-  }));
+const corsOptions = {
+  origin:'https://password-manager-ui-7zfb.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
   app.get('/', function(req, res){
     res.json({message:'ready'})
