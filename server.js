@@ -11,5 +11,5 @@ db.once('open',()=>{
     console.log("db connected");
 })
 app.listen(5000,()=>{
-    console.log("server started 3000");
+    console.log("server started 5000");
 })

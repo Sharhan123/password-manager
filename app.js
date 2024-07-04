@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const corsOptions = {
-  origin:'https://password-manager-ui-7zfb.vercel.app',
+  origin:'*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
